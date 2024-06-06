@@ -1,0 +1,22 @@
+<div class="logo-container">
+  <img src="assets/logo_form.png" alt ="Logo" class="logo">
+</div>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="input-row">
+    <app-input-field class = "input-container" type="text" label="Full Name" helperText="First Name" name="firstName" [required]="true" [(ngModel)]="formData.firstName" ngDefaultControl></app-input-field>
+    <app-input-field class ="input-container" type="text" helperText="Last Name" name="lastName" [required]="true" [(ngModel)]="formData.lastName" ngDefaultControl></app-input-field>
+  </div>
+  <div class="input-row">
+    <app-input-field class = "input-container" type="text" label ="Address" helperText="Street Address" name="address" [required]="true" [(ngModel)]="formData.address" ngDefaultControl></app-input-field>
+    <app-input-field class = "input-container" type="text" helperText="Street Address Line 2" name="address2" [required]="true" [(ngModel)]="formData.address2" ngDefaultControl></app-input-field>
+  </div>
+  <div class="input-row">
+    <app-input-field class = "input-container" type="text" helperText="City" name="city" [required]="true" [(ngModel)]="formData.city" ngDefaultControl></app-input-field>
+    <app-input-field class = "input-container" type="text" helperText="State / Province" name="state" [required]="true" [(ngModel)]="formData.state" ngDefaultControl></app-input-field>
+  </div>
+    <app-input-field class = "input-container" type="text" helperText="Postal / Zip Code" name="postalCode" [required]="true" [(ngModel)]="formData.postalCode" ngDefaultControl></app-input-field>
+    <app-input-field class = "input-container" type="tel" label="Phone Number" name="phone" [required]="true" pattern="\d{10}" [(ngModel)]="formData.phone" ngDefaultControl></app-input-field>
+  <app-input-field  class = "input-container" type="email" label="E-mail" helperText="example@email.com" name="email" [required]="true" [(ngModel)]="formData.email" ngDefaultControl></app-input-field>
+  <hr>
+  <button [disabled]="!isFormValid(form)"  type="submit">Submit</button>
+</form>

@@ -1,0 +1,108 @@
+$button-background-color: #28a745;
+$hover-button-background-color: #218838;
+$input-border: 1px solid #ccc;
+$hr-background-color: #bababa;
+$logo-container-padding:3em 3em 0em 0em;
+$form-max-width: 600px;
+$form-margin: 0 auto;
+$form-padding: 2em;
+$form-flex-direction: column;
+$form-align-items: center;
+$logo-margin-right: auto;
+$logo-margin-bottom: 15px;
+$form-group-input-padding: 0.5em;
+$form-group-input-border-radius: 4px;
+$form-group-input-width: 100%;
+$input-row-display: flex;
+$input-row-align-items: center;
+$input-row-width: 100%;
+$input-row-column-gap: 15px;
+$input-container-width: 100%;
+$button-padding: 0.7em 1.5em;
+$button-border: none;
+$button-color: white;
+$button-border-radius: 4px;
+$button-cursor: pointer;
+$button-font-size: 1em;
+$button-transition: background-color 0.3s ease;
+$button-margin-right: auto;
+$button-margin-top: 15px;
+$button-disabled-opacity: 0.8;
+$button-disabled-background-color: white;
+$button-disabled-color: #ccc;
+$button-disabled-border: 2px solid $hover-button-background-color;
+$hr-margin: 0;
+$hr-padding: 0;
+$hr-width: 100%;
+$hr-height: 1px;
+$hr-border: none;
+
+.logo-container {
+  max-width: $form-max-width;
+  margin: $form-margin;
+  padding:$logo-container-padding;
+  margin-right: $logo-margin-right;
+}
+
+form {
+  max-width: $form-max-width;
+  margin: $form-margin;
+  padding: $form-padding;
+  display: flex;
+  flex-direction: $form-flex-direction;
+  align-items: $form-align-items;
+
+  .form-group {
+    input {
+      padding: $form-group-input-padding;
+      border: $input-border;
+      border-radius: $form-group-input-border-radius;
+      width: $form-group-input-width;
+    }
+  }
+
+  .input-row {
+    display: $input-row-display;
+    align-items: $input-row-align-items;
+    width: $input-row-width;
+    column-gap: $input-row-column-gap;
+  }
+
+  .input-container {
+    width: $input-container-width;
+  }
+
+  button {
+    padding: $button-padding;
+    border: $button-border;
+    background-color: $button-background-color;
+    color: $button-color;
+    border-radius: $button-border-radius;
+    cursor: $button-cursor;
+    font-size: $button-font-size;
+    transition: $button-transition;
+    margin-right: $button-margin-right;
+    margin-top: $button-margin-top;
+
+    &:disabled {
+      opacity: $button-disabled-opacity;
+      background-color: $button-disabled-background-color;
+      color: $button-disabled-color;
+      cursor: not-allowed;
+      border: $button-disabled-border;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $hover-button-background-color;
+    }
+  }
+
+  hr {
+    margin: $hr-margin;
+    padding: $hr-padding;
+    background-color: $hr-background-color;
+    width: $hr-width;
+    height: $hr-height;
+    border: $hr-border;
+  }
+}

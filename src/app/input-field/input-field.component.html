@@ -1,0 +1,17 @@
+<div class="input-field" [ngClass]="{'no-label': !label}">
+  <label [for]="name">
+    {{ label }}
+    <span *ngIf="label && !isValid" class="error">*</span>
+  </label>
+  <input
+    [id]="name"
+    [name]="name"
+    [type]="type"
+    [(ngModel)]="value"
+    (input)="onValueChange($event)"
+    [required]="isRequired"
+    [pattern]="inputPattern"
+    (ngModelChange)="validate()"
+  >
+  <div class="helper-text">{{ helperText }}</div>
+</div>
